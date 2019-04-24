@@ -1,0 +1,144 @@
+.radio-toolbar {
+  color: black;
+  text-align: center;
+}
+
+
+div label input {
+  display: none;
+  color: inherit;
+}
+
+div > label {
+  position: relative;
+  cursor: pointer;
+}
+@media screen and (max-width: 600px){
+  span > div {
+    width: 15rem;
+    padding: 2rem;
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 600px){
+  span > div {
+    width: 15rem;
+    padding: 3rem;
+    font-size: 17px;
+  }
+}
+
+body {
+  background-color: #ffffff;
+}
+
+span > div > label.col-lg-12 {
+  font-family: 'Roboto', sans-serif;
+  color: #444444;
+  display: inline-block;
+  padding: 15px;
+  box-shadow: 1px 1px 4px 2px #dcdcdc;
+  overflow-y: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width:50vw;
+  text-align: center;
+  align-content: center;
+}
+
+
+span > div > p > label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  text-align: left;
+  color: #444444;
+  display: inline-block;
+  text-align: left;
+  width: 50vw;
+  line-height: 20px;
+}
+
+span > div {
+  vertical-align: middle;
+  text-align: center;
+  align-items: center;
+  display: inline-block;
+}
+span {
+  text-align: left;
+}
+
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.navheading {
+  font-family: 'Roboto', sans-serif;
+}
+
+.clr {
+  background-color: #e0e0e0;
+}
+
+
+.jumbotron {
+  background-color: white;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+
+
+
+.nvbr-itms:link, .nvbr-itms:visited {
+  display: block;
+  width: 120px;
+  text-align: center;
+  padding: 2px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  color: #f0f0f0;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.nvbr-itms:hover, .nvbr-itms:active {
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.nvbr-itms:after {
+  content: '';
+  width: 0px;
+  height: 1px;
+  display: block;
+  background: white;
+  transition: 300ms;
+  margin-top: 5px;
+
+}
+
+.nvbr-itms:hover:after {
+  width: 100%;
+}
+
+#id_name9 {
+  width: 50vw;
+  border: 2px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 10px;
+}
