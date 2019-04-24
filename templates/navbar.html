@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Lilita+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href='{% static "navbar.css" %}'>
+    <title>Navbar</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top navbar-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link nvbr-itms" href="landingpage/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nvbr-itms" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nvbr-itms" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nvbr-itms" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="col-lg-12 empty-space">
+      </div>
+
+      <div class="col-lg-12 col-xs-12">
+        <h2>About Musheer</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-5">
+          Musheer.com helps our clients
+          to decide how much amount of money should be invested in bonds and stocks based on the estimated risk they
+          want to afford. Higher risk taking will lead to higher rewards. We ensure best experience to customers willing
+          to take our help.
+        </div>
+
+        <div class="col-lg-5 musheer-logo logo-set">
+          <img src='{% static "Musheer-01.png" %}' width="200px" height="200px" alt="No image">
+        </div>
+      </div>
+
+      <div class="col-lg-12 empty-space2">
+      </div>
+
+
+      <div class="container" style="background-color: black;">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src='{% static "salar.jpg" %}' alt="one" width="960" height="640">
+              <div class="text-block">
+                <p><font size="6" face="cursive" color="black"><strong>SALAR AHMAD</strong><br/></font><font size="4" color="silver"><strong>Back-end developer</strong>
+                </font></p>
+                <p><font color="silver">A back-end web developer is responsible for server-side web application logic and integration of the work front-end developers do. Back-end developers are usually write the web services and APIs used by front-end developers and mobile application developers. <br/>A back-end web developer is responsible for server-side web application logic and integration of the work front-end developers do. Back-end developers are usually write the web services and APIs used by front-end developers and mobile application developers.</font></p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src='{% static "Eeman.jpg" %}' alt="two" width="1200" height="640">
+                <div class="text-block">
+                  <p><font size="6" color="white"><strong>EEMAN SARFRAZ</strong><br/></font><font size="4" color="silver"><strong>Front-end developer</strong>
+                  </font></p>
+                  <p><font color="silver">A back-end web developer is responsible for server-side web application logic and integration of the work front-end developers do. Back-end developers are usually write the web services and APIs used by front-end developers and mobile application developers. <br/>A back-end web developer is responsible for server-side web application logic and integration of the work front-end developers do. Back-end developers are usually write the web services and APIs used by front-end developers and mobile application developers.</font></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src='{% static "mozi.jpg" %}' alt="three" width="960" height="639">
+                <div class="text-block-two">
+                  <p><font size="6" color="white"><strong>MOAZZAM FARID</strong><br/></font><font size="4" color="silver"><strong>Back-end developer</strong>
+                  </font></p>
+                  <p><font color="silver">A back-end web developer is responsible for server-side web application logic and integration of the work front-end developers do. Back-end developers are usually write the web services and APIs used by front-end developers and mobile application developers. <br/>A back-end web developer is responsible for server-side web application logic and integration of the work front-end developers do. Back-end developers are usually write the web services and APIs used by front-end developers and mobile application developers.</font></p>
+                </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <p class="footer-links">
+          <a href="#">Home</a>
+          ·
+          <a href="#">Forms</a>
+          ·
+          <a href="#">About Us</a>
+        </p>
+        <p class="footer-company-name">Musheer &copy; 2019</p>
+      </div>
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Razi-I hostels</span> Nust, Islamabad</p>
+        </div>
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+92 337 7313356</p>
+        </div>
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@company.com">support@musheer.com</a></p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>Contact Us</span>
+          For any query, you may call or email us. You may also connect with us on our social accounts.
+        </p>
+        <div class="footer-icons">
+          <a href="www.facebook.com"><i class="fa fa-facebook"></i></a>
+          <a href="www.google.com"><i class="fa fa-google"></i></a>
+          <a href="www.linkedin.com"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

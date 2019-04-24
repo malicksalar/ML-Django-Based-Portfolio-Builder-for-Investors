@@ -1,0 +1,95 @@
+
+{% load widget_tweaks %}
+
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lilita+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="{% static '/formpage/favicon.ico' %}">
+
+    <link rel="stylesheet" href="{% static '/formpage/string.css' %}">
+    <script src="{% static '/formpage/scripting.js' %}"></script>
+    <title>Simple is Better Than Complex</title>
+  </head>
+  <body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link nvbr-itms" href='{% url "index" %}'>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nvbr-itms" href='{% url "form_name" %}'>Form</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nvbr-itms" href='{% url "about_musheer" %}'>About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container main-class">
+      <div class="jumbotron">
+        <form method="post" id="formpage1">
+          {% csrf_token %}
+          <div class="radio-toolbar">
+            {% for a in form %}
+              <span>
+                <div class="container col-lg-12 col-xs-12">
+                  <p>
+                    {% if a == form.name1 %}
+                      <label>Q1. How would your friends describe you as a risk taker?</label>
+                    {% endif %}
+                    {% if a == form.name2 %}
+                      <label>Q2. Which of the following options will you choose if given an option?</label>
+                    {% endif %}
+                    {% if a == form.name3 %}
+                      <label>Q3. When you hear the word risk, what comes to your mind first?</label>
+                    {% endif %}
+                    {% if a == form.name4 %}
+                      <label>Q4. Given the best and worst case scenarios of five investment choices below; which one would you choose?</label>
+                    {% endif %}
+                    {% if a == form.name5 %}
+                      <label>Q5. In addition to what you own, you have been given Rs 1000. You have now been asked to choose the following.</label>
+                    {% endif %}
+                    {% if a == form.name6 %}
+                      <label>Q6. Some experts are predicting that prices of bonds are likely to go down and prices of other assets such as real estate and gold to go up. However experts tend to agree that bonds are a relatively safer investment. What would you do?</label>
+                    {% endif %}
+                    {% if a == form.name7 %}
+                      <label>Q7. Supposing you are currently doing a government job with a stable income. How likely are you to quit your job and start your own business?</label>
+                    {% endif %}
+                    {% if a == form.name8 %}
+                      <label>Q8. Your trusted friend and neighbor is starting a new business. He estimates that there is only a 20% success chance. If you had the money, how much would you invest?</label>
+                    {% endif %}
+                    {% if a == form.name9 %}
+                      <label>How much would you like to invest?</label>
+                    {% endif %}
+                  </p>
+                  {% for b in a %}
+                    {{ b }}
+                  {% endfor %}
+                </div>
+              </span>
+            {% endfor %}
+            <button id = 'nice' type="submit" form = "formpage1" value='Submit' class="btn btn-primary">Submit</button>
+            <button class="btn btn-primary" formaction="{% url 'display' %}">Get Results</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
